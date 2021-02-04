@@ -1,18 +1,21 @@
-num_1 = int(input('Enter your first number: '))
-num_2 = int(input('Enter your second number: '))
- 
-# Addition
-print('{} + {} = '.format(num_1, num_2))
-print(num_1 + num_2)
- 
-# Subtraction
-print('{} - {} = '.format(num_1, num_2))
-print(num_1 - num_2)
- 
-# Multiplication
-print('{} * {} = '.format(num_1, num_2))
-print(num_1 * num_2)
- 
-# Division
-print('{} / {} = '.format(num_1, num_2))
-print(num_1 / num_2)
+class Calculator:
+  #empty constructor
+  def __init__(self):
+    pass
+  #add method - given two numbers, return the addition
+  def add(self, x1, x2):
+    return x1 + x2
+  #multiply method - given two numbers, return the 
+  #multiplication of the two
+  def multiply(self, x1, x2):
+    return x1 * x2
+  #subtract method - given two numbers, return the value
+  #of first value minus the second
+  def subtract(self, x1, x2):
+    return x1 - x2
+  #divide method - given two numbers, return the value
+  #of first value divided by the second
+  def divide(self, x1, x2):
+    if x2 == 0:
+      raise ValueError("Can't divide by zero") 
+    return x1/x2
